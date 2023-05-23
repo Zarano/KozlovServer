@@ -642,13 +642,31 @@ curl https://kozlovmikhail.ru
 sudo apt install php8.1-cli
 
 ```
-Установка примера PHP приложения 
+Установка composer 
+
+```
+php composer-setup.php
+
+```
+Делаю composer глобальным
+
+```
+mv composer.phar /home/mikhail/composer
+
+```
+Установка примера PHP приложения для инструментирования //https://signoz.io/blog/opentelemetry-php/
+
+```
+sudo apt-get install autoconf zlib1g-dev php-dev php-pear
+sudo pecl install grpc
+git clone https://github.com/SigNoz/sample-php-app
+~/signoz/sample-php-app/distributed-tracing/src
+php src/console-exporter.php
+
+```
+Мониторинг PHP-приложение с помощью SigNoz
 
 ```
 
-sudo apt-get install autoconf zlib1g-dev php-dev php-pear
-git clone git@github.com:SigNoz/sample-php-app.git
-sudo apt composer install
-sudo pecl install grpc
 
 
